@@ -7,6 +7,7 @@
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
+  --card-margin: 30px;
 }
 
 body {
@@ -50,10 +51,9 @@ button {
 
 .container {
   width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
+  margin: 0 auto;
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 .visually-hidden {
@@ -121,27 +121,49 @@ button {
   color: var(--secondary-text-color);
 }
 
-.header-item + .header-item {
-  margin-left: 50px;
+.header-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-contacts {
   display: flex;
   margin-left: auto;
 }
+.header-contacts-item {
+  display: flex;
+  align-items: center;
+}
 
-.header-contacts-item + .header-contacts-item {
-  margin-left: 50px;
+.header-contacts-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-contacts-link {
   display: block;
+  margin-left: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
   color: var(--primary-text-color);
+}
+
+.contacts-accent {
+  color: var(--primary-text-color);
+}
+.contacts-accent:hover {
+color: var(--accent-color);
+}
+
+.icon-envelope {
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  fill: currentColor;
 }
 
 .header-link:hover,
@@ -157,8 +179,8 @@ button {
 .hero {
   max-width: 1600px;
   height: 600px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   padding: 200px 0;
 
   text-align: center;
@@ -231,17 +253,8 @@ button {
   display: flex;
 }
 
-.section-item + .section-item {
-  margin-left: 30px;
-}
-
-.section-item.feature::before {
-  display: block;
-  content: '';
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--secondary-background-color);
+.section-item:not(:last-child) {
+  margin-right: var(--card-margin);
 }
 
 .section-item-title {
@@ -257,6 +270,13 @@ button {
   line-height: 1.71;
 }
 
+.icon-wrap {
+  background-color: var(--secondary-background-color);
+  margin-bottom: var(--card-margin);
+  text-align: center;
+}
+
+}
 /* -------------------TEAM---------------------- */
 
 .team {
@@ -272,25 +292,24 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
 }
 
 .team-card {
   background-color: var(--primary-background-color);
 }
 
-.team-item + .team-item {
-  margin-left: 30px;
+.team-item:not(:last-child) {
+  margin-right: var(--card-margin);
 }
 
 .team-thumb {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: var(--card-margin);
+  margin-bottom: var(--card-margin);
 }
 
 .team-item-title {
-  margin-top: 30px;
   margin-bottom: 10px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -299,9 +318,6 @@ button {
 }
 
 .team-item-text {
-  margin-top: 0;
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -347,27 +363,24 @@ button {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  /* flex-basis: calc((100% - 3 *30px) / 4; */
+  margin-right: calc(-1 * var(--card-margin));
+  margin-bottom: calc(-1 * var(--card-margin));
 }
+
+.project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-right: var(--card-margin);
+  margin-bottom: var(--card-margin);
+}
+
 .project-item:hover,
 .project-item:focus {
-  box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.project-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-}
-
 .project-title {
-  margin-top: 0;
   margin-bottom: 4px;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -376,9 +389,6 @@ button {
 }
 
 .project-text {
-  margin-top: 0;
-  margin-bottom: 0;
-
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
