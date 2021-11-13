@@ -48,16 +48,24 @@
 
         <!-- Контакты -->
         <ul class="header-contacts list">
-          <li class="header-contacts-item">
+          <li class="header-contacts-item contacts-hover">
             <a
               class="header-contacts-link link"
               href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
+            >
+              <svg class="icon-contacts" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
-          <li class="header-contacts-item">
-            <a class="header-contacts-link link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
+
+          <li class="header-contacts-item contacts-hover">
+            <a class="header-contacts-link link" href="tel:+380961111111">
+              <svg class="icon-contacts" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -234,7 +242,7 @@
 
     <footer class="footer">
       <div class="footer-content container">
-        <div class="address">
+        <div class="footer-address">
           <a class="footer-logo logo link" href="./index.html" lang="en">
             <span class="logo-accent">Web</span>Studio
           </a>
@@ -265,8 +273,42 @@
             </ul>
           </address>
         </div>
-        <div class="social">
-          <p>Присоединяйтесь</p>
+        <div class="footer-social">
+          <p class="footer-text">Присоединяйтесь</p>
+
+          <ul class="social-list list">
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
