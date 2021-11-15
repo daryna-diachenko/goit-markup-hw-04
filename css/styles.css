@@ -197,6 +197,9 @@ button {
 }
 
 .hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -306,8 +309,8 @@ button {
 }
 
 .team-thumb {
-  margin-top: var(--card-margin);
-  margin-bottom: var(--card-margin);
+  padding-top: var(--card-margin);
+  padding-bottom: var(--card-margin);
 }
 
 .team-item-title {
@@ -340,7 +343,6 @@ button {
   justify-content: center;
   align-items: center;
 
-  margin-right: 10px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -369,12 +371,15 @@ button {
   margin-right: calc(-1 * var(--card-margin));
 }
 
-.client-link {
+.clients-item {
+  margin-right: var(--card-margin);
+}
+
+.clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-right: var(--card-margin);
   width: 170px;
   height: 92px;
 
@@ -383,13 +388,13 @@ button {
   color: var(--border-color);
 }
 
-.client-link:hover,
-.client-link:focus {
+.clients-link:hover,
+.clients-link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
 
-.client-icon {
+.clients-icon {
   fill: currentColor;
 }
 
@@ -439,13 +444,17 @@ button {
 }
 
 .project-item {
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc(100% / 3 - var(--card-margin));
   margin-right: var(--card-margin);
   margin-bottom: var(--card-margin);
 }
 
-.project-item:hover,
-.project-item:focus {
+.project-link {
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -511,6 +520,10 @@ button {
   color: var(--contacts-text-color);
 }
 
+.footer-link.transparent:hover,
+.footer-link.transparent:focus {
+  color: var(--accent-color);
+
 .footer-text {
   margin-bottom: 20px;
   font-weight: 700;
@@ -525,7 +538,8 @@ button {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-social .social-link:hover {
+.footer-social .social-link:hover,
+.footer-social .social-link:focus {
   color: var(--primary-background-color);
   background-color: var(--accent-color);
 }
